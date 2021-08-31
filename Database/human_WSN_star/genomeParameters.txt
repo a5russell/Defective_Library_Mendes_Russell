@@ -1,0 +1,16 @@
+### STAR   --runMode genomeGenerate   --runThreadN 8   --genomeDir Data/Human_Flu_STAR   --genomeFastaFiles /oasis/tscc/scratch/a5russell/Database/human_WSN/fasta/genome.fa      --sjdbGTFfile /oasis/tscc/scratch/a5russell/Database/human_WSN/genes/genes.gtf
+### GstrandBit 32
+versionGenome	2.7.1a
+genomeFastaFiles	/oasis/tscc/scratch/a5russell/Database/human_WSN/fasta/genome.fa 
+genomeSAindexNbases	14
+genomeChrBinNbits	18
+genomeSAsparseD	1
+sjdbOverhang	100
+sjdbFileChrStartEnd	- 
+sjdbGTFfile	/oasis/tscc/scratch/a5russell/Database/human_WSN/genes/genes.gtf
+sjdbGTFchrPrefix	-
+sjdbGTFfeatureExon	exon
+sjdbGTFtagExonParentTranscript	transcript_id
+sjdbGTFtagExonParentGene	gene_id
+sjdbInsertSave	Basic
+genomeFileSizes	3143449739 23951168921

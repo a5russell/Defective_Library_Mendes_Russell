@@ -1,0 +1,5 @@
+Jul 15 09:34:35 ..... started STAR run
+Jul 15 09:34:35 ..... loading genome
+Jul 15 09:34:35 ..... started mapping
+Jul 15 09:50:32 ..... finished mapping
+Jul 15 09:50:32 ..... finished successfully

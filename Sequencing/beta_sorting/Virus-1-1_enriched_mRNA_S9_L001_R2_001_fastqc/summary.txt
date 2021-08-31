@@ -1,0 +1,11 @@
+PASS	Basic Statistics	Virus-1-1_enriched_mRNA_S9_L001_R2_001.fastq.gz
+FAIL	Per base sequence quality	Virus-1-1_enriched_mRNA_S9_L001_R2_001.fastq.gz
+WARN	Per tile sequence quality	Virus-1-1_enriched_mRNA_S9_L001_R2_001.fastq.gz
+PASS	Per sequence quality scores	Virus-1-1_enriched_mRNA_S9_L001_R2_001.fastq.gz
+FAIL	Per base sequence content	Virus-1-1_enriched_mRNA_S9_L001_R2_001.fastq.gz
+FAIL	Per sequence GC content	Virus-1-1_enriched_mRNA_S9_L001_R2_001.fastq.gz
+PASS	Per base N content	Virus-1-1_enriched_mRNA_S9_L001_R2_001.fastq.gz
+WARN	Sequence Length Distribution	Virus-1-1_enriched_mRNA_S9_L001_R2_001.fastq.gz
+FAIL	Sequence Duplication Levels	Virus-1-1_enriched_mRNA_S9_L001_R2_001.fastq.gz
+WARN	Overrepresented sequences	Virus-1-1_enriched_mRNA_S9_L001_R2_001.fastq.gz
+PASS	Adapter Content	Virus-1-1_enriched_mRNA_S9_L001_R2_001.fastq.gz

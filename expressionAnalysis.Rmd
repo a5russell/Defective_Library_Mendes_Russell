@@ -1,0 +1,31 @@
+---
+title: "mRNA_DeSeq2"
+output: html_document
+---
+'"
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Not set up to be as flexible as the rest of the pipeline. Presumes all mRNA files are meant to be compared. Can expand if need be, but given the nature of the manuscript this likely does not need to be made massively flexible, just ensure no hardcoding of platform-specific filepaths or such.
+
+```{r analysis}
+library(DESeq2)
+files <- Sys.glob("Results/*_STARalign/*_htseq_counts_cleaned.tsv")
+splits <- strsplit(files, '/|_')
+remove <- c("V1","V2", "V3", "V4", "V7", "V8", "V9")
+frame <- as.data.frame(do.call(rbind, splits))
+frame <- frame[,!(names(frame) %in% remove)]
+columns = c('sampleName','condition')
+colnames(frame) <- columns
+frame['fileName'] <- files
+frame <- frame[,c('sampleName', 'fileName', 'condition')]
+frame$sampleName = paste0(frame$sampleName, '_', frame$condition)
+frame$condition <- factor(frame$condition)
+ddHTSeq <- DESeqDataSetFromHTSeqCount(sampleTable=frame, design = ~ condition)
+ddHTSeq <- ddHTSeq[rowSums(counts(ddHTSeq)) >= 10,]
+dds <- DESeq(ddHTSeq)
+res <- results(dds)
+write.table(res, 'Results/DESeq.tsv', sep='\t', col.names=NA)
+```
+
+
