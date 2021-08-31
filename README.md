@@ -4,7 +4,7 @@ Only files smaller than 10mb were pushed to this repository.
 Larger files, such as sequencing, will need to be downloaded and reconstructed in the apppropriate folders in order to re-run this analysis.
 
 Code was run with the following accessible from the command line (in PATH)
-Samtools 1.9
+Samtools 1.9\n
 HTseq 0.11.3
 STAR 2.7.1a
 BLASTn 2.9.0+
