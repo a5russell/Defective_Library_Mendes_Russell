@@ -8,7 +8,7 @@ All intermediate files less than 10mb were pushed to this repository to aid in u
 Larger files, such as sequencing, will need to be downloaded and reconstructed in the apppropriate folders in order to re-run this analysis.
 Specifically, place NGS files within appropriate directories within Sequencing to rerun all sequencing analyses.
 
-#Directories
+## Directories
 
 The following directories, and their purpose, exist within this repository.
 
@@ -21,7 +21,7 @@ The following directories, and their purpose, exist within this repository.
   
   
 
-#Dependencies
+## Dependencies
 
 Code within this repository was run with the following tools, and versions, installed and available from PATH. Specific websites and documentation are provided where available. 
 
