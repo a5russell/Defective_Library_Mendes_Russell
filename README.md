@@ -78,6 +78,15 @@ Unmapped reads were then mapped using these new STAR indices, enforcing matching
 
 Remaining portions of this notebook describe analysis as depicted in the manuscript, and generation of those figures. 
 
+### Flow_cytometry.ipynb
 
+General analysis of flow cytometry data after initial debris gate and exporting to csv datafiles. Thresholds set on uninfected controls, expected to have no production of interferons or staining for influenza A virus proteins.
 
+### qPCR_analysis.ipynb
+
+Analysis of qCPR data exported to csv files. Data already pre-processed to generate Ct values, and, at times, also corrected for housekeeping. L32 used as housekeeping control throughout. 
+
+## Note
+
+The analysis of deletion junctions by BLASTn is very memory-intensive, and the intermediate, uncompressed, files take up a lot of space. I would recommend against running those components of the pipeline anywhere where you don't have access to ~100GB of space and ~32GB of RAM. Other components of this analysis can be run with very modest computational resources.
 
