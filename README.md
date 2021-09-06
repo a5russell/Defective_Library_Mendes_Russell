@@ -43,7 +43,7 @@ The following python packages and versions were used. All were installed using c
 - <b>statsmodels</b> run with version 0.12.1. (https://www.statsmodels.org/stable/index.html)
 
 The following R packages and versions were used. All were installed using CRAN (https://cran.r-project.org/)
-- <b>DESeq2</b>      run with version 1.28.1
+- <b>DESeq2</b>      run with version 1.28.1 (https://bioconductor.org/packages/release/bioc/html/DESeq2.html)
 
 
 ## Jupyter notebooks
