@@ -17,13 +17,13 @@ The following directories, and their purpose, exist within this repository.
 - <b>Scripts</b>        Short scripts written for this analysis. Seperated from jupyter notebooks for readability and portability.
 - <b>Sequencing</b>     Folder that would contain NGS samples to regenerate this pipeline. Folder achitecture essential to run of pipeline.
 - <b>flowCytometry</b>  Flow cytometry raw data
-- <b>qPCR</b>              qPCR raw data
+- <b>qPCR</b>           qPCR raw data
   
   
 
 #Dependencies
 
-Code within this repository was run with the following tools, and versions, installed and available from PATH. Many can be found and installed through conda (https://docs.conda.io/en/latest/), which is probably the easiest way to reconstruct this pipeline. However specific websites and documentation are provided where available. 
+Code within this repository was run with the following tools, and versions, installed and available from PATH. Specific websites and documentation are provided where available. 
 
 - <b>Python</b>      run with version 3.7. Available from https://www.python.org/downloads/release/python-370/
 - <b>Trimmomatic</b> run with version 0.39. Available from http://www.usadellab.org/cms/?page=trimmomatic
@@ -34,68 +34,16 @@ Code within this repository was run with the following tools, and versions, inst
 - <b>BLASTn</b>      run with version 2.9.0+. Available from https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=Download
 - <b>R</b>           run with version 4.0.2. Available from https://cran.r-project.org/bin/windows/base/
 
+The following python packages and versions were used. All were installed using conda. (https://docs.conda.io/en/latest/)
+- <b>numpy</b>       run with version 1.19.5. (https://numpy.org/)
+- <b>matplotlib</b>  run with version 3.3.3. (https://matplotlib.org/)
+- <b>seaborn</b>     run with version 0.11.0. (https://seaborn.pydata.org/)
+- <b>pandas</b>      run with version 1.2.0.(https://pandas.pydata.org/)
+- <b>scipy</b>       run with version 1.6.0. (https://www.scipy.org/)
+- <b>statsmodels</b> run with version 0.12.1. (https://www.statsmodels.org/stable/index.html)
 
-Repository for code on our analysis of defective influenza species using a length-based library analysis
-Only files smaller than 10mb were pushed to this repository. 
-
-Code was run with the following accessible from the command line (in PATH)
-
-
-
-Python 3.7
-
-R 4.0.2
-
+The following R packages and versions were used. All were installed using CRAN (https://cran.r-project.org/)
+- <b>DESeq2</b>      run with version 1.28.1
 
 
-and the following python packages
-
-numpy 1.19.5
-
-matplotlib 3.3.3
-
-seaborn 0.11.0
-
-pandas 1.2.0
-
-scipy 1.6.0
-
-statsmodels 0.12.1
-
-
-
-and the following R package
-
-DESeq2 1.28.1
-
-Scripts files contains utility scripts.
-
-Analysis is split across four jupyter notebooks and two R markdown files.
-
-
-Processing_and_analysis_of_barcoded_libraries.ipynb describes the generation and analysis of barcoded libraries.
-
-Interferon_beta_natural_diversity.ipynb describes the analysis of naturally-occurring deletions.
-
-qPCR_analysis.ipynb describes the processing and graphing of all qPCR data.
-
-Flow_cytometry.ipynb describes the processing and graphing of all flow cytometry data after initial debris gate set in FlowJo and data exported to csv. 
-
-
-expressionAnalysis.Rmd. Combined with Interferon_beta_natural_diversity.ipynb analyzes mRNASeq data validating interferon sort.
-
-barcode_DESeq.Rmd. Combined with Processing_and_analysis_of_barcoded_libraries.ipynb short script to analyze barcoded junctions using DESeq2.
-
-
-The following folders contain data or analyses.
-
-Database- contains WSN and human genomes necessary for analysis.
-
-Results- Results of analyses.
-
-qPCR- Data for qPCR analyses.
-
-flowCytometry - Data for flow cytometry analyses
-
-Sequencing- Folders that would contain sequencing data to reconstruct analysis.
 
