@@ -62,6 +62,22 @@ Analysis as appear in the manuscript are then performed, observing how junction 
 
 Lastly, this notebook outputs a DESeq2-compatible counts matrix that is analyzed with the companion R script, barcode_DESeq.Rmd, and then graphs the output of that same script. 
 
+### Interferon_beta_natural_diversity.ipynb
+
+Processing of natural diversity mRNA and vRNA sequencing. As we are not looking at discrete sequences within the fastQ files, as above, we add additional quality-processing steps.  Prior to any additional analysis, we first present our general quality metrics using fastQC and a custom script to parse results.
+
+First, as all samples were tagmented using Nextera adapters, Trimmomatic is used to remove these sequences as well as generally process our fastQC files. Again, a custom script is used to parse output for readability in our notebook.
+
+All reads, mRNA and vRNA, are then mapped using STAR. For mRNA, default values are used for mapping. For vRNA, values were chosen to enforce ungapped mapping to the A/WSN/1933 genome. Unmapped reads are retained as seperate fastQ files for vRNA.
+
+HTSeq was then used to prepare mRNA alignments for analysis with DESeq2. As the abbreviation for neuraminidase (NA) causes issues with processing, this is cleaned up. These data are then analyzed with the companion R script, expressionAnalysis.Rmd.
+
+For unmapped reads, files were converted to fasta files and run through BLASTn. Discontinuous junctions were identified wherein the discontinuity matched to the same segment, with the same polarity. These junctions were then used to initialize a new GTF, and generate a new STAR index, one for each biologically distinct viral population. 
+
+Unmapped reads were then mapped using these new STAR indices, enforcing matching to annotated discontinuities only. The resulting four bamfiles (2 for read1, 2 for read2) were merged and flags were fixed to identify pairmates. To count the number of occurrences of a given deletion junction, bamfiles data were sorted on pairmates, and, using awk, only reads where one or the other read has a discontinuity were retained for counting. Thereafter, it was ensured that each read was consistent with the deletion; that is, if the two reads overlap in the region containing the deletion, they must both call the same deletion. It is also required that between the two reads, at least 3 bases of sequence are mapped to either side of the junction.
+
+Remaining portions of this notebook describe analysis as depicted in the manuscript, and generation of those figures. 
+
 
 
 
