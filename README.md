@@ -16,8 +16,8 @@ The following directories, and their purpose, exist within this repository.
 - <b>Results</b>        Final datafiles for analyses after processing. Most provided as supplemental files within manuscript.
 - <b>Scripts</b>        Short scripts written for this analysis. Seperated from jupyter notebooks for readability and portability.
 - <b>Sequencing</b>     Folder that would contain NGS samples to regenerate this pipeline. Folder achitecture essential to run of pipeline.
-- <b>flowCytometry<\b>  Flow cytometry raw data
-- <b>qPCR>              qPCR raw data
+- <b>flowCytometry</b>  Flow cytometry raw data
+- <b>qPCR</b>              qPCR raw data
   
   
 
