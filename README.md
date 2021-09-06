@@ -46,4 +46,22 @@ The following R packages and versions were used. All were installed using CRAN (
 - <b>DESeq2</b>      run with version 1.28.1
 
 
+## Jupyter notebooks
+
+General descriptions of pipelines within each notebook described below.
+
+### Processing_and_analysis_of_barcoded_libraries.ipynb
+
+This notebook describes, first, generation of tiled primer sets in the forward, and reverse, orientations. Target annealing temperature was 60 degrees as calculated by the methods described in Breslauer et al. 1986 PNAS. Predicted size distributions are generated, and primers are output into an excel sheet compatible with ordering in a 384-well format. 
+
+Next, this notebook describes the assembly of barcodes and junctions. First, Up and Down junctions are matched to a given barcode sequence. Thereafter, Up and Down junctions associated with >75% of sequences aligning to a given barcode are assembled into a combined barcode-junction identity. Barcode-specific sequencing datasets can then be procesed into discrete junction counts.
+
+Assembly statistics are thereafter calculated across all datasets, as well as the fraction of theoretical versus actual junctions in both sets of libaries. 
+
+Analysis as appear in the manuscript are then performed, observing how junction abundance is altered under different selections. Include a few additional quality-control analyses not described in manuscript for those who wish to delve into the data more deeply. 
+
+Lastly, this notebook outputs a DESeq2-compatible counts matrix that is analyzed with the companion R script, barcode_DESeq.Rmd, and then graphs the output of that same script. 
+
+
+
 
