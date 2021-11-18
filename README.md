@@ -8,6 +8,8 @@ All intermediate files less than 10mb were pushed to this repository to aid in u
 Larger files, such as sequencing, will need to be downloaded and reconstructed in the apppropriate folders in order to re-run this analysis.
 Specifically, place NGS files within appropriate directories within Sequencing to rerun all sequencing analyses.
 
+Data may be found in GEO (including some processed files) at accession GSE183442.
+
 ## Directories
 
 The following directories, and their purpose, exist within this repository.
